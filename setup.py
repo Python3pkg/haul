@@ -18,7 +18,7 @@ long_description = open('README.rst').read() + '\n\n' + open('HISTORY.rst').read
 license = open('LICENSE').read()
 
 requirements_lines = [line.strip() for line in open('requirements.txt').readlines()]
-install_requires = list(filter(None, requirements_lines))
+install_requires = list([_f for _f in requirements_lines if _f])
 
 packages = [
     'haul',

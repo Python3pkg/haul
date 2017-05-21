@@ -41,7 +41,7 @@ def a_href_finder(pipeline_index,
         href = a.get('href', None)
         if href:
             href = str(href)
-            if filter(href.lower().endswith, ('.jpg', '.jpeg', '.gif', '.png')):
+            if list(filter(href.lower().endswith, ('.jpg', '.jpeg', '.gif', '.png'))):
               if (href not in finder_image_urls) and \
                  (href not in now_finder_image_urls):
                     now_finder_image_urls.append(href)

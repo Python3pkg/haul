@@ -1,6 +1,6 @@
 # coding: utf-8
 
-import cStringIO
+import io
 import sys
 
 
@@ -25,6 +25,6 @@ def read_file(path):
 
 
 def pack_image(self, content):
-    string_io = cStringIO.StringIO(content)
+    string_io = io.StringIO(content)
 
     return string_io
